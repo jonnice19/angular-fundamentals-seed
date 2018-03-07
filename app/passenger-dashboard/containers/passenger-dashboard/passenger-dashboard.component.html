@@ -1,0 +1,15 @@
+<passenger-count></passenger-count>
+<passenger-detail></passenger-detail>
+<h3>Airline Passengers</h3>
+<ul>
+    <li *ngFor="let passenger of passengers; let i = index">
+        <span class="status" [ngClass]="{'checked-in' : passenger.checkedIn}"></span>
+        {{ i }} {{ passenger.fullname }}
+        <div class="date">
+            Check in date: {{ passenger.checkedIn ? (passenger.checkedInDate | date:'yMMMMd') : 'Not Checked In' }}
+        </div>
+        <div class="children">
+            Children: {{ passenger.children?.length || 0 }}
+        </div>
+    </li>
+</ul>
