@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { CommonModule } from '@angular/common';
+import { HttpModule } from "@angular/http";
 
 import { PassengerDashboardModule } from "./passenger-dashboard/passenger-dashboard.module";
 
@@ -13,7 +13,7 @@ import { AppComponent } from './app.component';
   imports: [
     // Angular Modules
     BrowserModule,
-    CommonModule,
+    HttpModule, 
     // Custom Modules
     PassengerDashboardModule
   ],
